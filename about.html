@@ -24,6 +24,8 @@
         .edge-left{left:0}
         .edge-right{right:0}
         .page-frame{position:relative;max-width:1280px;margin:0 auto;padding:0 1rem;background-image:repeating-linear-gradient(22.5deg,transparent,transparent 2px,rgba(75,85,99,0.06) 2px,rgba(75,85,99,0.06) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(67.5deg,transparent,transparent 2px,rgba(107,114,128,0.05) 2px,rgba(107,114,128,0.05) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(112.5deg,transparent,transparent 2px,rgba(55,65,81,0.04) 2px,rgba(55,65,81,0.04) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(157.5deg,transparent,transparent 2px,rgba(31,41,55,0.03) 2px,rgba(31,41,55,0.03) 3px,transparent 3px,transparent 8px)}
+        /* Ensure the learnings icon is centered and styled like on Home */
+        .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
     </style>
 </head>
 <body>
@@ -63,6 +65,25 @@
                     <h2 class="h4">Our Mission</h2>
                     <p class="text-muted">We craft reusable UI components and design systems that help teams ship faster with consistent, accessible, and beautiful interfaces.</p>
 
+                    <!-- Bootstrap learnings: quick, high-signal notes to guide usage -->
+                    <div class="card shadow-soft border-subtle rounded-lg mt-3 mb-4">
+                        <div class="card-body py-3">
+                            <div class="d-flex align-items-center gap-2 mb-2">
+                                <div class="icon-badge d-inline-flex align-items-center justify-content-center" style="width:36px;height:36px;border-radius:8px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16"><path d="M3 2a1 1 0 0 0-1 1v9.5A1.5 1.5 0 0 0 3.5 14h9a.5.5 0 0 0 .5-.5V4a2 2 0 0 0-2-2H3z"/><path d="M6 12.5a.5.5 0 0 0 .5.5H12V4a1 1 0 0 0-1-1H6v9.5z"/></svg>
+                                </div>
+                                <strong class="mb-0">Bootstrap learnings</strong>
+                            </div>
+                            <ul class="mb-0 text-muted small ps-3">
+                                <li class="mb-1">Grid first: use <code>container</code>, <code>row</code>, <code>col-*</code> for layout.</li>
+                                <li class="mb-1">Utilities win: spacing (<code>p-*</code>, <code>m-*</code>), display, flex, text.</li>
+                                <li class="mb-1">Components are composable: cards, navbars, modals, forms.</li>
+                                <li class="mb-1">Responsive by suffix: <code>-sm</code>, <code>-md</code>, <code>-lg</code>, <code>-xl</code>.</li>
+                                <li class="mb-0">JS via data attributes: <code>data-bs-toggle</code>, <code>data-bs-target</code>.</li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <h2 class="h4 mt-4">Services</h2>
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -94,6 +115,38 @@
                                 <div class="card-body">
                                     <h5 class="card-title">Prototyping</h5>
                                     <p class="card-text text-muted">Clickable prototypes and UX flows to align stakeholders.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Performance Optimization</h5>
+                                    <p class="card-text text-muted">Profiling, code-splitting, and asset strategy to keep UIs fast.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Accessibility (a11y)</h5>
+                                    <p class="card-text text-muted">ARIA, keyboard flows, and contrast checks for inclusive experiences.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Documentation</h5>
+                                    <p class="card-text text-muted">Living docs and examples that scale with your component library.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Maintenance & Support</h5>
+                                    <p class="card-text text-muted">Versioning, migrations, and support plans to keep teams shipping.</p>
                                 </div>
                             </div>
                         </div>
