@@ -65,9 +65,11 @@ Count: 8
 8) Page Frame + Edge Gradients – layout wrapper + vertical lines
 
 ## Project structure
-- `index.html`: capsule navbar, hero with video, features, demo modal, learnings card
-- `about.html`: capsule navbar, hero-muted header, mission, learnings card, services grid, sidebar cards
-- `contact.html`: capsule navbar, header, validated form
+- `src/index.html`: capsule navbar, hero with video, features, demo modal, learnings card
+- `src/about.html`: capsule navbar, hero-muted header, mission, learnings card, services grid, sidebar cards
+- `src/contact.html`: capsule navbar, header, validated form
+
+A root `index.html` redirects to `src/index.html` for convenience.
 
 ## Customize quickly
 - Shape: `--radius`
@@ -76,7 +78,7 @@ Count: 8
 - Frame width: `.page-frame { max-width: ... }`
 
 ## Run
-Open `index.html` in a browser. All assets via CDN.
+Open `src/index.html` in a browser (or the root `index.html` auto-redirects).
 
 ## Credits
 - Background concept inspired by `patterncraft.fun`.
