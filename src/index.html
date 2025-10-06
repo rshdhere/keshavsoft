@@ -53,6 +53,18 @@
         .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
         .feature-link{display:inline-flex;align-items:center;gap:.375rem;color:#0f172a;text-decoration:none}
         .feature-link:hover{text-decoration:underline}
+        /* Mobile tweaks without changing structure */
+        @media (max-width: 576px) {
+            .navbar-capsule .container{margin-top:.5rem;margin-bottom:.5rem;padding:.5rem .75rem}
+            .display-hero{font-size:2.1rem}
+            .lead-constrained{max-width:100%}
+            .page-frame{padding:0 .75rem}
+            .edge-gradient{display:none}
+            /* Make large buttons less chunky on small screens */
+            .hero-gradient .btn.btn-lg{font-size:1rem;line-height:1.25;border-radius:.5rem}
+            .hero-gradient .btn.btn-lg.px-4{padding-left:.9rem!important;padding-right:.9rem!important}
+            .hero-gradient .d-flex.gap-3.mt-4{gap:.5rem}
+        }
     </style>
 </head>
 <body>
