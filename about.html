@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | KeshavSoft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--radius:12px;--border:1px;--border-color:#e5e7eb;--bg:#f8fafc;--card-bg:#ffffff;--text:#0f172a;--muted:#64748b;--primary:#111827}
+        body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#ffffff;color:var(--text);min-height:100vh}
+        .card{border:var(--border) solid var(--border-color);border-radius:var(--radius)}
+        .shadow-soft{box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06)}
+        .rounded-lg{border-radius:var(--radius)!important}
+        .btn-primary{background:var(--primary);border-color:var(--primary)}
+        .btn-ghost{background:transparent;border:var(--border) solid var(--border-color);color:#0f172a}
+        .btn-ghost:hover{background:#f1f5f9}
+        .hero-muted{background:linear-gradient(180deg,#f8fafc,#ffffff)}
+        .navbar-capsule{background:transparent;border-bottom:0}
+        .navbar-capsule .container{position:relative;background:#fff;border:1px solid var(--border-color);border-radius:9999px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);padding:.5rem 1rem;margin-top:.75rem;margin-bottom:.75rem}
+        .edge-gradient{position:absolute;top:0;bottom:0;width:1px;pointer-events:none;background:linear-gradient(180deg, rgba(212,212,216,.5), #e5e7eb 60%, rgba(229,231,235,0))}
+        .edge-left{left:0}
+        .edge-right{right:0}
+        .page-frame{position:relative;max-width:1280px;margin:0 auto;padding:0 1rem;background-image:repeating-linear-gradient(22.5deg,transparent,transparent 2px,rgba(75,85,99,0.06) 2px,rgba(75,85,99,0.06) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(67.5deg,transparent,transparent 2px,rgba(107,114,128,0.05) 2px,rgba(107,114,128,0.05) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(112.5deg,transparent,transparent 2px,rgba(55,65,81,0.04) 2px,rgba(55,65,81,0.04) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(157.5deg,transparent,transparent 2px,rgba(31,41,55,0.03) 2px,rgba(31,41,55,0.03) 3px,transparent 3px,transparent 8px)}
+    </style>
+</head>
+<body>
+    <div class="page-frame">
+        <div class="edge-gradient edge-left"></div>
+        <div class="edge-gradient edge-right"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-capsule sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">KeshavSoft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page header -->
+    <header class="py-5 hero-muted border-bottom">
+        <div class="container">
+            <h1 class="fw-bold">About Us</h1>
+            <p class="text-muted mb-0">What we do and how we can help.</p>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <main class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <h2 class="h4">Our Mission</h2>
+                    <p class="text-muted">We craft reusable UI components and design systems that help teams ship faster with consistent, accessible, and beautiful interfaces.</p>
+
+                    <h2 class="h4 mt-4">Services</h2>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Design Systems</h5>
+                                    <p class="card-text text-muted">Foundations, tokens, and component libraries tailored to your brand.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">UI Engineering</h5>
+                                    <p class="card-text text-muted">Implementation with modern frameworks and Bootstrap best practices.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Consulting</h5>
+                                    <p class="card-text text-muted">Audits, workshops, and hands-on help to improve velocity.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card h-100 shadow-soft">
+                                <div class="card-body">
+                                    <h5 class="card-title">Prototyping</h5>
+                                    <p class="card-text text-muted">Clickable prototypes and UX flows to align stakeholders.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card shadow-soft">
+                        <div class="card-body">
+                            <h5 class="card-title">Why Bootstrap 5?</h5>
+                            <ul class="text-muted mb-0">
+                                <li>Responsive grid and utilities</li>
+                                <li>Accessible components</li>
+                                <li>Customizable via variables</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card mt-3 shadow-soft">
+                        <div class="card-body">
+                            <h6 class="card-subtitle mb-2 text-muted">Quick Links</h6>
+                            <a class="d-block" href="index.html">Home</a>
+                            <a class="d-block" href="contact.html">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-auto border-top bg-white">
+        <div class="container d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+            <span class="text-muted">© <span id="year"></span> KeshavSoft</span>
+            <div class="d-flex gap-3">
+                <a href="about.html" class="link-secondary text-decoration-none">About</a>
+                <a href="contact.html" class="link-secondary text-decoration-none">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</div>
+</body>
+</html>
+

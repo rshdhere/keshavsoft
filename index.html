@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | KeshavSoft</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--radius:12px;--border:1px;--border-color:#e5e7eb;--bg:#f8fafc;--card-bg:#ffffff;--text:#0f172a;--muted:#64748b;--primary:#111827}
+        html,body{height:100%}
+        body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#ffffff;color:var(--text);min-height:100vh}
+        .border-subtle{border:var(--border) solid var(--border-color)}
+        .card{border:var(--border) solid var(--border-color);border-radius:var(--radius);background:var(--card-bg)}
+        .rounded-lg{border-radius:var(--radius)!important}
+        .shadow-soft{box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06)}
+        .navbar{--bs-navbar-color:#334155;--bs-navbar-hover-color:#0f172a}
+        .navbar-capsule{background:transparent;border-bottom:0}
+        .navbar-capsule .container{position:relative;background:#fff;border:1px solid var(--border-color);border-radius:9999px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);padding:.5rem 1rem;margin-top:.75rem;margin-bottom:.75rem}
+        .navbar-toggler{border-color:rgba(0,0,0,.08)}
+        .edge-gradient{position:absolute;top:0;bottom:0;width:1px;pointer-events:none;background:linear-gradient(180deg, rgba(212,212,216,.5), #e5e7eb 60%, rgba(229,231,235,0))}
+        .edge-left{left:0}
+        .edge-right{right:0}
+        .page-frame{position:relative;max-width:1280px;margin:0 auto;padding:0 1rem;background-image:repeating-linear-gradient(22.5deg,transparent,transparent 2px,rgba(75,85,99,0.06) 2px,rgba(75,85,99,0.06) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(67.5deg,transparent,transparent 2px,rgba(107,114,128,0.05) 2px,rgba(107,114,128,0.05) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(112.5deg,transparent,transparent 2px,rgba(55,65,81,0.04) 2px,rgba(55,65,81,0.04) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(157.5deg,transparent,transparent 2px,rgba(31,41,55,0.03) 2px,rgba(31,41,55,0.03) 3px,transparent 3px,transparent 8px)}
+        .navbar .nav-link.active{color:#0f172a}
+        .btn-primary{background:var(--primary);border-color:var(--primary)}
+        .btn-primary:hover{background:#0b1220;border-color:#0b1220}
+        .btn-ghost{background:transparent;border:var(--border) solid var(--border-color);color:#0f172a}
+        .btn-ghost:hover{background:#f1f5f9}
+        .hero-gradient{background:linear-gradient(180deg,#f8fafc, #ffffff)}
+        .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
+        .form-control:focus{box-shadow:0 0 0 .25rem rgba(17,24,39,.15);border-color:#111827}
+        footer{background:#fff}
+        .display-hero{font-weight:500;line-height:1.05;letter-spacing:-0.025em;font-size:clamp(2.5rem, 6vw, 4.5rem)}
+        .tracking-tighter{letter-spacing:-0.025em}
+        .lead-constrained{max-width:42rem;margin-left:auto;margin-right:auto}
+        .card-feature{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
+        .card-feature:hover{transform:translateY(-2px);box-shadow:0 2px 6px rgba(15,23,42,.06),0 16px 32px rgba(15,23,42,.08);border-color:#d1d5db}
+        .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
+        .feature-link{display:inline-flex;align-items:center;gap:.375rem;color:#0f172a;text-decoration:none}
+        .feature-link:hover{text-decoration:underline}
+    </style>
+</head>
+<body>
+    <div class="page-frame">
+        <div class="edge-gradient edge-left"></div>
+        <div class="edge-gradient edge-right"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-capsule sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">KeshavSoft</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-5 pt-0 hero-gradient">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <h1 class="display-hero tracking-tighter text-center text-lg-start mt-3">magically design <br>components and sections</h1>
+                    <p class="lead text-muted lead-constrained text-center text-lg-start mt-3">
+                        Instantly design beautiful components and sections.<br>
+                        Drag, drop, and customize—no code required. <br>
+                        Build your next project visually in minutes.
+                    </p>
+                    <div class="d-flex align-items-center gap-3 mt-4 justify-content-center justify-content-lg-start">
+                        <a href="about.html" class="btn btn-primary btn-lg px-4">Learn More</a>
+                        <a href="contact.html" class="btn btn-ghost btn-lg px-4">Contact Us</a>
+                        <button class="btn btn-ghost btn-lg px-4" data-bs-toggle="modal" data-bs-target="#demoModal">Watch modal</button>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9 rounded-lg overflow-hidden shadow-soft bg-white border-subtle">
+                        <video src="hero.mp4" autoplay muted loop playsinline preload="metadata" poster="" style="object-fit:cover;width:100%;height:100%"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Features</h2>
+                <p class="text-muted">Reusable components to speed up your workflow.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature h-100 shadow-soft">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+                                    <path d="M11.251 0a.5.5 0 0 1 .461.314l.013.04 1.714 5.143a.5.5 0 0 1-.474.657H9.972l1.04 5.188a.5.5 0 0 1-.86.398l-.03-.032L4.25 7.5h2.778L5.99 1.936a.5.5 0 0 1 .592-.61l.04.01 4.629 1.15V.5a.5.5 0 0 1 .5-.5z"/>
+                                </svg>
+                            </div>
+                            <h5 class="card-title mb-1">Fast Prototyping</h5>
+                            <p class="card-text text-muted mb-3">Start quickly with polished defaults and utility classes.</p>
+                            <a href="#" class="feature-link">Learn more
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 8a.75.75 0 0 1 .75-.75h4.69L7.22 5.03a.75.75 0 1 1 1.06-1.06l3.25 3.25a.75.75 0 0 1 0 1.06L8.28 11.5a.75.75 0 0 1-1.06-1.06l2.22-2.22H4.75A.75.75 0 0 1 4 8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature h-100 shadow-soft">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
+                                    <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4.5h12zM1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1H1V3z"/>
+                                    <path d="M2 6h12v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6z"/>
+                                </svg>
+                            </div>
+                            <h5 class="card-title mb-1">Reusable Components</h5>
+                            <p class="card-text text-muted mb-3">Cards, navbars, hero sections, and sidebars ready to go.</p>
+                            <a href="#" class="feature-link">Explore components
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 8a.75.75 0 0 1 .75-.75h4.69L7.22 5.03a.75.75 0 1 1 1.06-1.06l3.25 3.25a.75.75 0 0 1 0 1.06L8.28 11.5a.75.75 0 0 1-1.06-1.06l2.22-2.22H4.75A.75.75 0 0 1 4 8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-feature h-100 shadow-soft">
+                        <div class="card-body">
+                            <div class="feature-icon mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-device-ssd" viewBox="0 0 16 16">
+                                    <path d="M5 11h6v2H5v-2z"/>
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8.5a1.5 1.5 0 0 1-1.5 1.5H1.5A1.5 1.5 0 0 1 0 12.5V4zm1 0v8.5A.5.5 0 0 0 1.5 13h13a.5.5 0 0 0 .5-.5V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1z"/>
+                                </svg>
+                            </div>
+                            <h5 class="card-title mb-1">Responsive by Default</h5>
+                            <p class="card-text text-muted mb-3">Looks great on desktop, tablet, and mobile with no extra work.</p>
+                            <a href="#" class="feature-link">See how it scales
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M4 8a.75.75 0 0 1 .75-.75h4.69L7.22 5.03a.75.75 0 1 1 1.06-1.06l3.25 3.25a.75.75 0 0 1 0 1.06L8.28 11.5a.75.75 0 0 1-1.06-1.06l2.22-2.22H4.75A.75.75 0 0 1 4 8z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Modal -->
+    <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-lg border-subtle shadow-soft">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product demo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9 rounded-lg overflow-hidden border-subtle">
+                        <video id="demoVideo" src="hero.mp4" controls playsinline style="object-fit:cover;width:100%;height:100%"></video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</div>
+</body>
+</html>
+
