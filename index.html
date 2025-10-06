@@ -9,20 +9,29 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /*
+         Design tokens and tiny utility layer
+         - Minimal variables to evoke a shadcn-inspired neutral theme
+         - We still rely on Bootstrap 5 for grid, layout, and components
+        */
         :root{--radius:12px;--border:1px;--border-color:#e5e7eb;--bg:#f8fafc;--card-bg:#ffffff;--text:#0f172a;--muted:#64748b;--primary:#111827}
         html,body{height:100%}
+        /* Keep the outer canvas clean white; pattern lives inside the page frame */
         body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#ffffff;color:var(--text);min-height:100vh}
         .border-subtle{border:var(--border) solid var(--border-color)}
         .card{border:var(--border) solid var(--border-color);border-radius:var(--radius);background:var(--card-bg)}
         .rounded-lg{border-radius:var(--radius)!important}
         .shadow-soft{box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06)}
         .navbar{--bs-navbar-color:#334155;--bs-navbar-hover-color:#0f172a}
+        /* Capsule navbar: stays pill-shaped at all times */
         .navbar-capsule{background:transparent;border-bottom:0}
         .navbar-capsule .container{position:relative;background:#fff;border:1px solid var(--border-color);border-radius:9999px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.06);padding:.5rem 1rem;margin-top:.75rem;margin-bottom:.75rem}
         .navbar-toggler{border-color:rgba(0,0,0,.08)}
+        /* Thin vertical accents that frame the whole page */
         .edge-gradient{position:absolute;top:0;bottom:0;width:1px;pointer-events:none;background:linear-gradient(180deg, rgba(212,212,216,.5), #e5e7eb 60%, rgba(229,231,235,0))}
         .edge-left{left:0}
         .edge-right{right:0}
+        /* Page frame width controls the spacing between vertical lines */
         .page-frame{position:relative;max-width:1280px;margin:0 auto;padding:0 1rem;background-image:repeating-linear-gradient(22.5deg,transparent,transparent 2px,rgba(75,85,99,0.06) 2px,rgba(75,85,99,0.06) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(67.5deg,transparent,transparent 2px,rgba(107,114,128,0.05) 2px,rgba(107,114,128,0.05) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(112.5deg,transparent,transparent 2px,rgba(55,65,81,0.04) 2px,rgba(55,65,81,0.04) 3px,transparent 3px,transparent 8px),repeating-linear-gradient(157.5deg,transparent,transparent 2px,rgba(31,41,55,0.03) 2px,rgba(31,41,55,0.03) 3px,transparent 3px,transparent 8px)}
         .navbar .nav-link.active{color:#0f172a}
         .btn-primary{background:var(--primary);border-color:var(--primary)}
@@ -30,12 +39,15 @@
         .btn-ghost{background:transparent;border:var(--border) solid var(--border-color);color:#0f172a}
         .btn-ghost:hover{background:#f1f5f9}
         .hero-gradient{background:linear-gradient(180deg,#f8fafc, #ffffff)}
+        /* Simple icon container used in multiple places */
         .icon-badge{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
         .form-control:focus{box-shadow:0 0 0 .25rem rgba(17,24,39,.15);border-color:#111827}
         footer{background:#fff}
+        /* Hero type scale, tuned to resemble shadcn/Tailwind defaults */
         .display-hero{font-weight:500;line-height:1.05;letter-spacing:-0.025em;font-size:clamp(2.5rem, 6vw, 4.5rem)}
         .tracking-tighter{letter-spacing:-0.025em}
         .lead-constrained{max-width:42rem;margin-left:auto;margin-right:auto}
+        /* Feature card polish: tiny elevation on hover to feel clickable */
         .card-feature{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease}
         .card-feature:hover{transform:translateY(-2px);box-shadow:0 2px 6px rgba(15,23,42,.06),0 16px 32px rgba(15,23,42,.08);border-color:#d1d5db}
         .feature-icon{display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:12px;border:var(--border) solid var(--border-color);background:#f8fafc;color:#111827}
@@ -44,10 +56,16 @@
     </style>
 </head>
 <body>
+    <!--
+        Page frame
+        The two vertical lines live here, framing the content. We also keep
+        the patterned background inside the frame so the outside stays plain.
+    -->
     <div class="page-frame">
         <div class="edge-gradient edge-left"></div>
         <div class="edge-gradient edge-right"></div>
     <!-- Navbar -->
+    <!-- Capsule navbar: lightweight + always-pill, content-centered -->
     <nav class="navbar navbar-expand-lg navbar-capsule sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">KeshavSoft</a>
@@ -65,11 +83,14 @@
     </nav>
 
     <!-- Hero -->
+    <!-- Hero section: left text, right video. Keep top flush under navbar -->
     <section class="py-5 pt-0 hero-gradient">
         <div class="container">
             <div class="row align-items-center g-4">
                 <div class="col-lg-6">
+                    <!-- The tighter tracking gives that modern editorial feel -->
                     <h1 class="display-hero tracking-tighter text-center text-lg-start mt-3">magically design <br>components and sections</h1>
+                    <!-- Human, friendly copy. Kept readable width on larger screens. -->
                     <p class="lead text-muted lead-constrained text-center text-lg-start mt-3">
                         Instantly design beautiful components and sections.<br>
                         Drag, drop, and customize—no code required. <br>
@@ -78,10 +99,12 @@
                     <div class="d-flex align-items-center gap-3 mt-4 justify-content-center justify-content-lg-start">
                         <a href="about.html" class="btn btn-primary btn-lg px-4">Learn More</a>
                         <a href="contact.html" class="btn btn-ghost btn-lg px-4">Contact Us</a>
+                        <!-- A simple entry to the modal-based demo -->
                         <button class="btn btn-ghost btn-lg px-4" data-bs-toggle="modal" data-bs-target="#demoModal">Watch modal</button>
                     </div>
                 </div>
                 <div class="col-lg-6">
+                    <!-- Right media: responsive 16:9 video, autoplay muted for quiet polish -->
                     <div class="ratio ratio-16x9 rounded-lg overflow-hidden shadow-soft bg-white border-subtle">
                         <video src="hero.mp4" autoplay muted loop playsinline preload="metadata" poster="" style="object-fit:cover;width:100%;height:100%"></video>
                     </div>
@@ -91,6 +114,7 @@
     </section>
 
     <!-- Features -->
+    <!-- Feature cards: concise value props with tiny motion on hover -->
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5">
@@ -101,6 +125,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-feature h-100 shadow-soft">
                         <div class="card-body">
+                            <!-- Simple visual anchor. SVG keeps things crisp. -->
                             <div class="feature-icon mb-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
                                     <path d="M11.251 0a.5.5 0 0 1 .461.314l.013.04 1.714 5.143a.5.5 0 0 1-.474.657H9.972l1.04 5.188a.5.5 0 0 1-.86.398l-.03-.032L4.25 7.5h2.778L5.99 1.936a.5.5 0 0 1 .592-.61l.04.01 4.629 1.15V.5a.5.5 0 0 1 .5-.5z"/>
@@ -117,6 +142,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-feature h-100 shadow-soft">
                         <div class="card-body">
+                            <!-- Reusable components stay consistent across pages -->
                             <div class="feature-icon mb-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
                                     <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4.5h12zM1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v1H1V3z"/>
@@ -134,6 +160,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card card-feature h-100 shadow-soft">
                         <div class="card-body">
+                            <!-- We lean on Bootstrap's grid to handle breakpoints -->
                             <div class="feature-icon mb-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-device-ssd" viewBox="0 0 16 16">
                                     <path d="M5 11h6v2H5v-2z"/>
@@ -153,6 +180,7 @@
     </section>
 
     <!-- Demo Modal -->
+    <!-- Demo modal: a quick peek without leaving the page -->
     <div class="modal fade" id="demoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content rounded-lg border-subtle shadow-soft">
